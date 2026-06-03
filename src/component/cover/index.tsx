@@ -5,7 +5,7 @@ import {
   WEDDING_DATE,
   WEDDING_DATE_FORMAT,
 } from "../../const"
-import { COVER_IMAGE } from "../../images"
+import { COVER_IMAGE } from "../../images_sample"
 import { LazyDiv } from "../lazyDiv"
 
 const DAY_OF_WEEK = [

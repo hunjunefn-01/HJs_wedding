@@ -3,7 +3,7 @@ import ArrowLeft from "../../icons/angle-left-sm.svg?react"
 import { LazyDiv } from "../lazyDiv"
 import { Button } from "../button"
 import { Modal } from "../modal"
-import { GALLERY_IMAGES } from "../../images"
+import { GALLERY_IMAGES } from "../../images_sample"
 
 /**
  * 캐러셀 아이템 요소 생성
