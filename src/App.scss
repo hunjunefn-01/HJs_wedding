@@ -18,12 +18,19 @@
   --theme-bg-color: #e8e0d5;  // 따뜻한 오두막 배경 (기본 70%)
   --alt-color: #4e342e;       // 이전의 부드러운 짙은 갈색
   --alt-bg-color: #b59d85;    // 이전의 연한 갈색 (보조 포인트 20%)
+
   --dark-color: #282c34;
   --dark-grey-color: #d2d2d2;
   --light-grey-color: #eaeaea;
   --light-color: #ffffff;
   --white-color: #ffffff;
   --red-color: #ff0000;
+  --light-red-color: #d29292;
+
+  --info-card-bg-color: var(--white-color);    // 1. 카드 전체 배경색
+  --info-card-text-color: var(--alt-color);    // 2. 카드 전체 글자색
+  --info-label-bg-color: var(--theme-color);   // 3. 라벨 박스 배경색
+  --info-label-text-color: var(--light-grey-color); // 4. 라벨 박스 내 글자색
 
   font-family: "Noto Sans KR", sans-serif;
   font-size: 20px;
@@ -208,7 +215,7 @@ div.break {
   height: 1rem;
 }
 
-// 갤러리 하단 인디케이터 (숫자 카운트 방식: - 1 / 31 -)
+// 갤러리 하단 인디케이터 (숫자 카운트 방식: - 1 / 30 -)
 .carousel-indicator {
   font-size: 0.9rem;
   color: var(--alt-color);
@@ -219,10 +226,12 @@ div.break {
 
 // information 카드 제목
 .label {
-  color: var(--alt-color) !important;
+  color: var(--info-label-text-color) !important;
+  background-color: var(--info-label-bg-color) !important;
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
   font-weight: bold;
-  border-bottom: 1px solid var(--theme-bg-color);
-  padding-bottom: 0.3rem;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
 }
@@ -234,6 +243,6 @@ div.break {
   line-height: 1.6;
 
   .content {
-    color: var(--dark-color);
+    color: var(--info-card-text-color);
   }
 }

@@ -7,6 +7,8 @@
     position: relative;
     border: 1px solid var(--alt-color);
     border-radius: 0.5rem;
+    background-color: var(--info-card-bg-color);
+
     .label {
       position: absolute;
       left: 50%;
@@ -14,8 +16,7 @@
       transform: translateX(-50%);
       padding: 0.5rem 2rem 0.5rem 2rem;
       border-radius: 1rem;
-      background-color: var(--alt-bg-color);
-      border: 1px solid var(--alt-color);
+      border: 1px solid var(--info-card-text-color);
     }
   }
   .content {
