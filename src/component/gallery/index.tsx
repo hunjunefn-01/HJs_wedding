@@ -380,17 +380,9 @@ export const Gallery = () => {
             </div>
           </div>
 
-          {/* 하단 인디케이터 (점) */}
+          {/* 하단 인디케이터 (숫자 카운트 방식) */}
           <div className="carousel-indicator">
-            {CAROUSEL_ITEMS.map((_, idx) => (
-              <button
-                key={idx}
-                className={`indicator${idx === slide ? " active" : ""}`}
-                onClick={() =>
-                  onIndicatorClick(statusRef.current, slideRef.current, idx)
-                }
-              />
-            ))}
+            - {slide + 1} / {CAROUSEL_ITEMS.length} -
           </div>
         </div>
 
