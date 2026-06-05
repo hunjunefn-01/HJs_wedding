@@ -45,12 +45,13 @@ class Snowflake {
 }
 
 export const BGSnowy = () => {
-  const ref = useRef<HTMLCanvasElement>({} as HTMLCanvasElement)
+  const ref = useRef<HTMLCanvasElement>(null)
   const flakesRef = useRef<Snowflake[]>([])
   const animationFrameIdRef = useRef(0)
 
   useEffect(() => {
     const canvas = ref.current
+    if (!canvas) return
     const ctx = canvas.getContext("2d") as CanvasRenderingContext2D
     
     const updateSize = () => {

@@ -27,4 +27,4 @@ export const STATIC_ONLY = import.meta.env.VITE_STATIC_ONLY === "true"
  * .env 파일의 VITE_BG_EFFECT_TYPE에서 가져옵니다.
  * 기본값은 'flower'입니다.
  */
-export const BG_EFFECT_TYPE: "flower" | "snow" = (import.meta.env.VITE_BG_EFFECT_TYPE as "flower" | "snow") || "flower"
+export const BG_EFFECT_TYPE: "flower" | "snow" = "snow" // 테스트를 위해 강제로 'snow' 고정

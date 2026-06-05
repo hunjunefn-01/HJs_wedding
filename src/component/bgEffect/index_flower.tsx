@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react"
-import patelUrl from "../../icons/petal.png"
+import petalUrl from "../../icons/petal.png"
 
 // 꽃잎의 이동 및 회전 속도 설정
 const X_SPEED = 0.6
@@ -72,19 +72,20 @@ class Petal {
 }
 
 export const BGFlower = () => {
-  const ref = useRef<HTMLCanvasElement>({} as HTMLCanvasElement)
+  const ref = useRef<HTMLCanvasElement>(null)
   const petalsRef = useRef<Petal[]>([])
   const resizeTimeoutRef = useRef(0)
   const animationFrameIdRef = useRef(0)
 
   useEffect(() => {
     const canvas = ref.current
+    if (!canvas) return
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
     const ctx = canvas.getContext("2d") as CanvasRenderingContext2D
     const petalImg = new Image()
-    petalImg.src = patelUrl
+    petalImg.src = petalUrl
 
     const getPetalNum = () => {
       return Math.floor((window.innerWidth * window.innerHeight) / 30000)

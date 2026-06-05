@@ -14,14 +14,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
 :root {
-  --theme-color: #ff8585;
-  --theme-bg-color: #ffe7e7;
-  --alt-color: #c28080;
-  --alt-bg-color: #f4f0f0;
+  --theme-color: #a62626;     // 짙은 빨간색 선물상자 (강조 10%)
+  --theme-bg-color: #e8e0d5;  // 따뜻한 오두막 배경 (기본 70%)
+  --alt-color: #3e2723;       // 짙은 고목 나무 색상
+  --alt-bg-color: #2d5a27;    // 초록색 소나무 (보조 20%)
   --dark-color: #282c34;
   --dark-grey-color: #d2d2d2;
   --light-grey-color: #eaeaea;
-  --light-color: #f9f9f9;
+  --light-color: #ffffff;     // 카드는 깨끗한 흰색으로 유지하여 가독성 확보
   --white-color: #ffffff;
   --red-color: #ff0000;
 
