@@ -43,6 +43,7 @@ export const Invitation = () => {
         <div className="content">숲속의 소중한 이웃 여러분,</div>
         <div className="content">추운 겨울날을 녹여줄 저희의 작은 축제에</div>
         <div className="content">함께 오셔서 저희의 시작을 응원해 주세요.</div>
+        <div className="break" />
 
         <div className="break" />
 

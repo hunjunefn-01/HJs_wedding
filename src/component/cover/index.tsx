@@ -46,9 +46,9 @@ export const Cover = () => {
       <div className="subtitle">Save the date for the wedding of</div>
       {/* 이름 표시 */}
       <div className="names">
-        {GROOM_FULLNAME}
-        <div className="divider" />
-        {BRIDE_FULLNAME}
+        <span>{GROOM_FULLNAME}</span>
+        <span className="heart">❤️</span>
+        <span>{BRIDE_FULLNAME}</span>
       </div>
       {/* 예식 정보 (포맷팅된 날짜 및 장소) */}
       <div className="info">{WEDDING_DATE.format(WEDDING_DATE_FORMAT)}</div>

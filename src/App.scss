@@ -10,8 +10,9 @@
 @use "./component/modal";
 @use "./component/shareButton";
 
-// 구글 폰트 Noto Sans KR 임포트
+// 구글 폰트 임포트
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
 :root {
   --theme-color: #a62626;     // 짙은 빨간색 선물상자 (강조 10%)
@@ -32,7 +33,8 @@
   --info-label-bg-color: var(--theme-color);   // 3. 라벨 박스 배경색
   --info-label-text-color: var(--light-grey-color); // 4. 라벨 박스 내 글자색
 
-  font-family: "Noto Sans KR", sans-serif;
+  // font-family: "Noto Sans KR", sans-serif;
+  font-family: "Gowun Dodum", sans-serif;
   font-size: 20px;
   @media (max-width: 500px) {
     font-size: 4vw;
@@ -84,7 +86,8 @@ $colors: (
 }
 
 button {
-  font-family: "Noto Sans KR", sans-serif;
+  // font-family: "Noto Sans KR", sans-serif;
+  font-family: "Gowun Dodum", sans-serif;
   font-size: 1rem;
   border: none;
   background-color: transparent;
@@ -121,12 +124,12 @@ body {
 
   .card-view {
     width: 100%;
-    max-width: 980px;
+    max-width: 900px; // 전체 컨텐츠의 최대 너비를 줄이고 싶다면 이 값을 조절하세요.
     text-align: center;
 
     .card-group {
       position: relative;
-      @media (width > 980px) {
+      @media (width > 900px) {
         display: flex;
         flex-direction: row;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -149,8 +152,8 @@ body {
 
       .card {
         background-color: var(--light-color);
-        padding: 1rem;
         border: 1px solid var(--light-grey-color);
+        padding: 2rem 1rem; // 상하 여백을 늘려 카드를 더 길게 보이게 할 수 있습니다.
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -159,7 +162,7 @@ body {
 
         @media (max-width: 980px) {
           box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
-          margin: 0.5rem;
+          margin: 1rem; // 모바일에서 카드 사이의 간격을 넓히고 싶다면 이 값을 조절하세요.
           width: auto;
 
           opacity: 0;

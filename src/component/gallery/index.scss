@@ -1,7 +1,9 @@
+// 갤러리 레이아웃 및 애니메이션을 위한 변수
 $gallery-width: 21rem;
 $gallery-height: 30rem;
 $transition-duration: 0.3s;
 
+// 이미지 슬라이드 이동 애니메이션
 @keyframes moving-right {
   from {
     transform: translateX(0);
@@ -11,26 +13,32 @@ $transition-duration: 0.3s;
   }
 }
 
+// 갤러리 섹션 전체 컨테이너
 .gallery {
+  // 캐러셀(슬라이더)을 감싸는 전체 영역
   .carousel-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    // 실제 이미지가 보여지는 캐러셀 본체
     .carousel {
       width: $gallery-width;
       overflow: hidden;
       position: relative;
       z-index: 3;
 
+      // 슬라이딩되는 이미지들의 목록
       .carousel-list {
         display: flex;
         width: fit-content;
         justify-content: center;
 
+        // 이미지 전환 시 적용되는 부드러운 효과
         &.transitioning {
           transition: $transition-duration ease-out;
         }
 
+        // 왼쪽 방향 이동 애니메이션
         &.moving-left {
           animation-name: moving-right;
           animation-duration: $transition-duration;
@@ -38,12 +46,14 @@ $transition-duration: 0.3s;
           animation-direction: reverse;
         }
 
+        // 오른쪽 방향 이동 애니메이션
         &.moving-right {
           animation-name: moving-right;
           animation-duration: $transition-duration;
           animation-fill-mode: forwards;
         }
 
+        // 개별 이미지 아이템
         .carousel-item {
           display: flex;
           justify-content: center;
@@ -52,6 +62,7 @@ $transition-duration: 0.3s;
           height: $gallery-height;
           padding-left: 0.5rem;
           padding-right: 0.5rem;
+          // 사진 비율을 유지하며 중앙 배치
           img {
             max-width: 100%;
             max-height: 100%;
@@ -61,6 +72,7 @@ $transition-duration: 0.3s;
         }
       }
 
+      // 캐러셀 좌/우 화살표 컨트롤 영역
       .carousel-control {
         position: absolute;
         top: 0;
@@ -70,20 +82,25 @@ $transition-duration: 0.3s;
         justify-content: space-between;
         align-items: center;
 
+        // 개별 컨트롤 버튼 (투명한 클릭 영역 확보)
         .control {
           height: 100%;
           width: 30%;
           display: flex;
           align-items: center;
+          // 왼쪽 화살표 정렬
           &.left {
             justify-content: flex-start;
           }
+          // 오른쪽 화살표 정렬
           &.right {
             justify-content: flex-end;
           }
 
+          // 실제 화살표 아이콘 모양
           .arrow {
             width: 2rem;
+            // 오른쪽 버튼은 왼쪽 화살표를 180도 회전시켜 사용
             &.right {
               transform: rotate(180deg);
             }
@@ -92,11 +109,13 @@ $transition-duration: 0.3s;
       }
     }
 
+    // 하단 인디케이터 (현재 사진 위치 표시 점)
     .carousel-indicator {
       display: flex;
       justify-content: center;
       margin-top: 1rem;
 
+      // 개별 인디케이터 점 스타일
       .indicator {
         width: 1rem;
         height: 1rem;
@@ -112,6 +131,7 @@ $transition-duration: 0.3s;
         position: relative;
         z-index: 3;
 
+        // 현재 보고 있는 사진의 인디케이터 강조
         &.active {
           &::before {
             background-color: var(--dark-color);
@@ -122,9 +142,11 @@ $transition-duration: 0.3s;
   }
 }
 
+// 전체 사진 보기 클릭 시 나타나는 모달 스타일
 .all-photo-modal {
   width: 22rem;
   .header {
+    // 모달 상단 제목
     .title {
       text-align: center;
       font-size: 1.2rem;
@@ -133,13 +155,16 @@ $transition-duration: 0.3s;
     }
   }
 
+  // 모달 본문 (사진 그리드 목록)
   .content {
     padding: 0 0.7rem 0.7rem 0.7rem;
+    // 2열 그리드 배치
     .photo-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-auto-rows: 12rem;
       gap: 0.5rem;
+      // 그리드 내 이미지 꽉 채우기
       img {
         width: 100%;
         height: 100%;
@@ -148,6 +173,7 @@ $transition-duration: 0.3s;
     }
   }
 
+  // 모달 하단 닫기 버튼 영역
   .footer {
     display: flex;
     flex-direction: column;
