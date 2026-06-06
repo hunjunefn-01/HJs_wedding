@@ -53,7 +53,7 @@ export const Invitation = () => {
           <span className="relation">
             의 <span className="relation-name">{GROOM_TITLE}</span>
           </span>{" "}
-          {GROOM_FULLNAME}
+          {GROOM_FULLNAME}🤵🏻‍♂️
         </div>
         {/* 혼주 및 신부 정보 */}
         <div className="name">
@@ -61,7 +61,7 @@ export const Invitation = () => {
           <span className="relation">
             의 <span className="relation-name">{BRIDE_TITLE}</span>
           </span>{" "}
-          {BRIDE_FULLNAME}
+          {BRIDE_FULLNAME}👰🏻‍♀️
         </div>
 
         <div className="break" />

@@ -23,7 +23,7 @@ function App() {
       {/* 배경 애니메이션 효과 (예: 꽃잎 내리기) */}
       <BGEffect />
       <div className="card-view">
-        <LazyDiv className="card-group">
+        <LazyDiv className="card-group" style={{ animationDelay: '0s' }}>
           {/* 메인 커버 섹션 */}
           <Cover />
 
@@ -31,7 +31,7 @@ function App() {
           <Invitation />
         </LazyDiv>
 
-        <LazyDiv className="card-group">
+        <LazyDiv className="card-group" style={{ animationDelay: '0.4s' }}>
           {/* 결혼식 날짜 및 달력 섹션 */}
           <Calendar />
 
@@ -39,12 +39,12 @@ function App() {
           <Gallery />
         </LazyDiv>
 
-        <LazyDiv className="card-group">
+        <LazyDiv className="card-group" style={{ animationDelay: '0.8s' }}>
           {/* 오시는 길 및 지도 섹션 */}
           <Location />
         </LazyDiv>
 
-        <LazyDiv className="card-group">
+        <LazyDiv className="card-group" style={{ animationDelay: '1.2s' }}>
           {/* 축의금 및 연락처 정보 섹션 */}
           <Information />
           {/* 방명록 섹션 (정적 모드가 아닐 때만 표시) */}
