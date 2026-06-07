@@ -9,6 +9,7 @@ import {
   KMAP_PLACE_ID,
   LOCATION,
   NMAP_PLACE_ID,
+  MAP_ZOOM,
   WEDDING_HALL_POSITION,
 } from "../../const"
 import { NAVER_MAP_CLIENT_ID } from "../../env"
@@ -58,7 +59,7 @@ const NaverMap = () => {
           WEDDING_HALL_POSITION[1],
           WEDDING_HALL_POSITION[0],
         ),
-        zoom: 17,
+        zoom: MAP_ZOOM,
       })
 
       // 마커 추가

@@ -3,7 +3,6 @@ import utc from "dayjs/plugin/utc"
 import timezone from "dayjs/plugin/timezone"
 import "dayjs/locale/ko"
 
-// dayjs 설정: UTC 및 타임존 플러그인 확장, 한국어 로캘 설정
 dayjs.extend(utc)
 dayjs.extend(timezone)
 dayjs.locale("ko")
@@ -43,7 +42,7 @@ export const LOCATION_ADDRESS = "서울 강서구 강서로 388 (등촌동 678-1
  * 카카오톡 공유 시 사용할 위치 정보 주소
  * 필요에 따라 LOCATION과 다르게 설정할 수 있습니다.
  */
-export const SHARE_ADDRESS = LOCATION
+export const SHARE_ADDRESS = LOCATION_ADDRESS
 
 /**
  * 카카오톡 공유 시 표시될 위치 제목
@@ -53,13 +52,19 @@ export const SHARE_ADDRESS_TITLE = LOCATION
 /**
  * 지도 서비스(네이버, 카카오)에 사용할 좌표 [경도, 위도]
  */
-export const WEDDING_HALL_POSITION = [37.560247, 126.839387]
+export const WEDDING_HALL_POSITION = [126.839387, 37.560247]
 
 /**
  * 네이버 지도 장소 ID (NMAP_PLACE_ID)
  * 네이버 지도에서 장소 검색 후 URL의 숫자 부분을 입력합니다.
  */
 export const NMAP_PLACE_ID = 33499928
+
+/**
+ * 네이버 지도 초기 줌 레벨. 
+ * 숫자가 높을수록 확대됩니다. (보통 15~17 권장)
+ */
+export const MAP_ZOOM = 16
 
 /**
  * 카카오 지도 장소 ID (KMAP_PLACE_ID)
