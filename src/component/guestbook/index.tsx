@@ -4,7 +4,7 @@ import { dayjs } from "../../const"
 import { LazyDiv } from "../lazyDiv"
 import { Modal } from "../modal"
 import offlineGuestBook from "./offlineGuestBook.json"
-import { SERVER_URL } from "../../env"
+import { SERVER_URL, STATIC_ONLY } from "../../env"
 
 /**
  * 방명록 입력 규칙 설정
@@ -54,7 +54,7 @@ export const GuestBook = () => {
    * 서버 또는 로컬 파일에서 방명록 게시물을 불러옵니다.
    */
   const loadPosts = async () => {
-    if (SERVER_URL) {
+    if (SERVER_URL && !STATIC_ONLY) {
       try {
         const res = await fetch(
           `${SERVER_URL}/guestbook?offset=${0}&limit=${3}`,
@@ -90,7 +90,7 @@ export const GuestBook = () => {
               <button
                 className="close-button"
                 onClick={async () => {
-                  if (SERVER_URL) {
+                if (SERVER_URL && !STATIC_ONLY) {
                     setDeletePostId(post.id)
                     deleteGuestBookModalState[1](true)
                   }
@@ -112,7 +112,7 @@ export const GuestBook = () => {
         <div className="break" />
 
         {/* 방명록 작성 버튼 (서버 URL이 있을 때만 표시) */}
-        {SERVER_URL && (
+        {SERVER_URL && !STATIC_ONLY && (
           <>
             <Button onClick={() => writeGuestBookModalState[1](true)}>
               방명록 작성하기
@@ -325,7 +325,7 @@ const GuestBookListModal = ({
    */
   const loadPage = useCallback(async (page: number) => {
     setCurrentPage(page)
-    if (SERVER_URL) {
+    if (SERVER_URL && !STATIC_ONLY) {
       try {
         const offset = page * POSTS_PER_PAGE
         const res = await fetch(
@@ -379,7 +379,7 @@ const GuestBookListModal = ({
               <div
                 className="close-button"
                 onClick={async () => {
-                  if (SERVER_URL) {
+                  if (SERVER_URL && !STATIC_ONLY) {
                     setDeletePostId(post.id)
                     deleteGuestBookModalState[1](true)
                   }
