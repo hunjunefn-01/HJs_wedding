@@ -12,7 +12,7 @@ import { useEffect, useRef, useState } from "react"
 import HeartIcon from "../../icons/heart-icon.svg?react"
 import CalendarIcon from "../../icons/calendar-icon.svg?react"
 import MarkerIcon from "../../icons/marker-icon.svg?react"
-import { SERVER_URL } from "../../env"
+import { SERVER_URL, STATIC_ONLY } from "../../env"
 
 /**
  * 입력 데이터 제한 규칙
@@ -43,14 +43,14 @@ export const AttendanceInfo = () => {
     if (initialized.current) return
     initialized.current = true
 
-    // 서버 URL이 없거나 예식일이 지났으면 안내 모달을 띄우지 않음
-    if (!SERVER_URL || WEDDING_DATE.isBefore(now.current)) return
+    // 서버 URL이 없거나, 정적 모드이거나, 예식일이 지났으면 안내 모달을 띄우지 않음
+    if (!SERVER_URL || STATIC_ONLY || WEDDING_DATE.isBefore(now.current)) return
 
     attendanceInfoModalState[1](true)
   }, [attendanceInfoModalState])
 
   // 서버 연동 기능이 비활성화되어 있거나 이미 예식이 종료된 경우 섹션을 렌더링하지 않음
-  if (!SERVER_URL || WEDDING_DATE.isBefore(now.current)) return null
+  if (!SERVER_URL || STATIC_ONLY || WEDDING_DATE.isBefore(now.current)) return null
 
   return (
     <>
