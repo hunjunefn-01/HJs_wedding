@@ -100,21 +100,21 @@ image21,
 image25,
 // image31,
 
-// 개인사진
-// image7,
-image8,
-// image9,
-// image10,
-image11,
-image37,
-image38,
-
 // 파란배경
 image26,
 // image27,
 // image28,
 // image29,
 image30,
+
+// 개인사진
+// image7,
+// image8,
+// image9,
+// image10,
+// image11,
+image37,
+image38,
 
 // 갈색배경
 image32,
