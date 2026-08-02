@@ -10,13 +10,7 @@ import { GALLERY_IMAGES } from "../../images"
  */
 const CAROUSEL_ITEMS = GALLERY_IMAGES.map((item, idx) => (
   <div className="carousel-item" key={idx}>
-    <img
-      src={item}
-      draggable={false}
-      alt={`${idx}`}
-      loading="lazy"
-      decoding="async"
-    />
+    <img src={item} draggable={false} alt={`${idx}`} />
   </div>
 ))
 
@@ -66,17 +60,12 @@ export const Gallery = () => {
   }
 
   useEffect(() => {
-    // 현재 슬라이드와 좌우 다음 슬라이드만 미리 로드 (전체를 한 번에 받지 않도록)
-    const preloadIndexes = [
-      slide,
-      (slide + 1) % GALLERY_IMAGES.length,
-      (slide - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length,
-    ]
-    preloadIndexes.forEach((idx) => {
+    // 이미지 프리로드 (Preload)
+    GALLERY_IMAGES.forEach((image) => {
       const img = new Image()
-      img.src = GALLERY_IMAGES[idx]
+      img.src = image
     })
-  }, [slide])
+  }, [])
 
   // 캐러셀 동작 상태
   const [status, _setStatus] = useState<Status>("stationary")
@@ -420,8 +409,6 @@ export const Gallery = () => {
                 src={image}
                 alt={`${idx}`}
                 draggable={false}
-                loading="lazy"
-                decoding="async"
                 onClick={() => {
                   if (statusRef.current === "stationary") {
                     if (idx !== slideRef.current) {

@@ -1,10 +1,8 @@
 import { useState } from "react"
 import { BRIDE_INFO, GROOM_INFO } from "../../const"
-import { STATIC_ONLY } from "../../env"
 import { Button } from "../button"
 import { LazyDiv } from "../lazyDiv"
 import { Modal } from "../modal"
-import { AttendanceInfo } from "./attendance"
 
 /**
  * 식사 정보 안내 컴포넌트입니다.
@@ -124,30 +122,19 @@ export const Information2 = () => {
 }
 
 /**
- * 정보 안내(식사, 축의금, 참석의사)를 통합하여 표시하는 컴포넌트입니다.
+ * 정보 안내(식사, 축의금)를 통합하여 표시하는 컴포넌트입니다.
  *
  * @returns {JSX.Element} 정보 안내 섹션
  */
 export const Information = () => {
-  // 정적 모드일 경우 참석 의사 전달 기능을 제외합니다.
-  if (STATIC_ONLY) {
-    return (
-      <>
-        <LazyDiv className="card information">
-          <Information1 />
-        </LazyDiv>
-        <LazyDiv className="card information">
-          <Information2 />
-        </LazyDiv>
-      </>
-    )
-  }
-
   return (
-    <LazyDiv className="card information">
-      <Information1 />
-      <Information2 />
-      <AttendanceInfo />
-    </LazyDiv>
+    <>
+      <LazyDiv className="card information">
+        <Information1 />
+      </LazyDiv>
+      <LazyDiv className="card information">
+        <Information2 />
+      </LazyDiv>
+    </>
   )
 }
