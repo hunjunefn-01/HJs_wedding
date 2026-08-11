@@ -36,11 +36,11 @@ export const Information2 = () => {
       <div className="info-card">
         <div className="label">마음 전하기</div>
         <div className="content">
-          참석이 어려워 직접 축하해주지 못하는
+          참석이 어려우신 분들을 위해
           <br />
-          분들을 위해 계좌번호를 기재하였습니다.
+          마음 전하실 계좌를 안내드립니다.
           <br />
-          넓은 마음으로 양해 부탁드립니다.
+          넓은 마음으로 양해해 주시면 감사하겠습니다.
         </div>
 
         <div className="break" />

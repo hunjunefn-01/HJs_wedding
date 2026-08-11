@@ -33,16 +33,13 @@ export const Invitation = () => {
         <div className="break" />
 
         {/* 초대 문구 */}
-        <div className="content">하얀 눈이 포근히 내려앉은 평화로운 동물 마을</div>
-        <div className="content">누런색 헌쥐와 뽀얀색 혜쥐가</div>
-        <div className="content">서로의 따뜻한 털실이 되어주기로 했습니다.</div>
+        <div className="content">한 해를 마무리하는 겨울날,</div>
+        <div className="content">저희 두 사람은 영원한 사랑을 약속합니다.</div>
         <div className="break" />
-        <div className="content">작은 오두막 안, 맛있는 도토리와</div>
-        <div className="content">다정한 온기를 나누며 평생을 약속합니다.</div>
+        <div className="content">서로에게 따뜻한 안식이 되어 살아가겠습니다.</div>
         <div className="break" />
-        <div className="content">숲속의 소중한 이웃 여러분,</div>
-        <div className="content">추운 겨울날을 녹여줄 저희의 작은 축제에</div>
-        <div className="content">함께 오셔서 저희의 시작을 응원해 주세요.</div>
+        <div className="content">소중한 시간으로 함께해 주세요.</div>
+        <div className="content">귀한 발걸음으로 축복해 주시면 감사하겠습니다.</div>
         <div className="break" />
 
         <div className="break" />
