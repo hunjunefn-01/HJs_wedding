@@ -65,7 +65,7 @@ export const Location = () => {
           <div />
           <div className="content">
             * 주차장 이용 시 웨딩홀과 같은 건물입니다.
-            <br />- 네이버 지도, 카카오 네비, 티맵 등 이용
+            <br />- 네이버 지도, 카카오 내비, 티맵 등 이용
             <br />→ <b>더베뉴지서울</b> 검색
           </div>
           <div />
