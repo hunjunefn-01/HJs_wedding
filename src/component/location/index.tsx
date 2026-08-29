@@ -33,8 +33,6 @@ export const Location = () => {
           <div className="heading">대중교통</div>
           <div />
           <div className="content">
-            * 입구: 스타벅스 매장 왼편입니다.
-            <br />
             <br />* 지하철
             <br />- 5호선 <b>발산역 3번 출구</b> 방향 1분 이내
             <br />- 9호선 <b>양천향교역 6번 출구</b> 도보 10분 직진
@@ -69,9 +67,6 @@ export const Location = () => {
             <br />→ <b>더베뉴지서울</b> 검색
           </div>
           <div />
-          <div className="content">
-            <b>※ 참고 사항입니다.</b>
-          </div>
         </div>
       </LazyDiv>
     </>
