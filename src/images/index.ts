@@ -84,6 +84,7 @@ image51,
 // image6,
 
 // 하얀배경
+image11, // 혜쥐씨의 추가요청
 image12,
 // image13,
 image14,
